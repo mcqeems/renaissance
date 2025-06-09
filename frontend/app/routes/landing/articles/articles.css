@@ -1,0 +1,39 @@
+/* Buka app.css dan tambahkan kode di bawah ini */
+
+/* ================================================= */
+/* ATURAN CSS WAJIB UNTUK GSAP SCROLLSMOOTHER */
+/* ================================================= */
+
+/* Beri tahu html dan body untuk mengisi seluruh tinggi layar */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Mencegah scroll horizontal yang tidak diinginkan */
+}
+
+/* Wrapper utama dari ScrollSmoother harus 'fixed' untuk mengambil alih scroll.
+  Ini adalah "kanvas" tempat GSAP akan bekerja.
+*/
+#smooth-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Konten di dalamnya harus bisa di-scroll (overflow: visible) 
+  dan mengisi wrapper. GSAP akan menggerakkan div inilah
+  untuk menciptakan efek smooth scroll.
+*/
+#smooth-content {
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+}
+
+/* ================================================= */
+/* AKHIR DARI ATURAN CSS WAJIB */
+/* ================================================= */

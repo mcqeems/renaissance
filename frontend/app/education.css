@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html,
+body {
+  background-color: #12151e;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Plus Jakarta Sans', 'sans-serif';
+}
+
+section {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  visibility: hidden;
+
+  .outer,
+  .inner {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+  }
+
+  .bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-size: cover;
+    background-position: center;
+
+    h2 {
+      z-index: 2;
+    }
+
+    .clip-text {
+      overflow: hidden;
+    }
+  }
+}
+
+.first .bg {
+  background: #12151e;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 21, 30, 1) 0%,
+    rgba(18, 21, 30, 1) 60%,
+    rgba(7, 8, 12, 0.9) 90%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+}
+.second .bg {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
+    url('education/Classrom.png');
+}
+.third .bg {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
+    url('education/Classroom2.png');
+}
+.fourth .bg {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
+    url('education/WoodFloor.png');
+}
+.fifth .bg {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
+    url('education/WoodRoom.png');
+  background-position: 50% 45%;
+}
+
+.sixth .bg {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
+    url('education/WoodRoom2.png');
+  background-position: 50% 45%;
+}
+
+.seventh .bg {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
+    url('education/WoodRoom3.png');
+  background-position: 50% 45%;
+}
+
+.eigth .bg {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
+    url('education/SakuraStreet1.png');
+  background-position: 50% 45%;
+}
+
+.ninth .bg {
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.596) 100%),
+    url('education/SakuraStreet2.png');
+  background-position: 50% 45%;
+}
+
+.arrowCta {
+  display: block;
+  height: 20px;
+  width: 20px;
+  border: 11px solid transparent;
+  transform: rotate(45deg);
+  position: relative;
+  margin: 20px auto;
+}
+
+.arrowCta:after,
+.arrowCta:before {
+  content: '';
+  display: block;
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.arrowCta:after {
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  animation: bottom-arrow 1.65s infinite;
+}
+
+@keyframes bottom-arrow {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  45% {
+    opacity: 0;
+    transform: translate(12px, 12px);
+  }
+  46% {
+    opacity: 0;
+    transform: translate(-16px, -16px);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(-6px, -6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-6px, -6px);
+  }
+}
+
+.arrowCta:before {
+  top: 0;
+  left: 0;
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+  animation: top-arrow 1.65s infinite;
+}
+
+@keyframes top-arrow {
+  0% {
+    transform: translate(-6px, -6px);
+  }
+  35% {
+    transform: translate(0, 0);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}

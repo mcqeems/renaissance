@@ -1,0 +1,364 @@
+@reference "./app.css"
+
+html,
+body {
+  background-color: #12151e;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.typing-cursor {
+  opacity: 0;
+}
+
+.ambient-zone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 1;
+  /* PERUBAHAN: Blur dikurangi agar bentuk lebih terlihat */
+  filter: blur(60px);
+}
+
+/* --- Definisi Corak & Animasi per Zona (DIPERBARUI) --- */
+
+/* Add this to your landing.css file */
+
+/* Base ambient zone styling */
+.ambient-zone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.6;
+  filter: blur(80px);
+  overflow: hidden;
+}
+
+/* Create multiple light orbs using pseudo-elements */
+.ambient-zone::before,
+.ambient-zone::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  animation-duration: 8s, 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  opacity: 0.4;
+}
+
+.ambient-zone::before {
+  width: 300px;
+  height: 300px;
+  animation-name: float-light-1, color-shift-1;
+}
+
+.ambient-zone::after {
+  width: 200px;
+  height: 200px;
+  animation-name: float-light-2, color-shift-2;
+}
+
+/* Intro Section - Soft blue/purple ambient */
+.ambient-zone-intro::before {
+  background: radial-gradient(circle, #4f46e5 0%, #3b82f6 50%, transparent 70%);
+  top: 20%;
+  left: 10%;
+}
+
+.ambient-zone-intro::after {
+  background: radial-gradient(circle, #6366f1 0%, #8b5cf6 50%, transparent 70%);
+  bottom: 30%;
+  right: 15%;
+  animation-delay: -4s, -2s;
+}
+
+/* Logo Section - Golden/warm ambient */
+.ambient-zone-logo::before {
+  background: radial-gradient(circle, #f59e0b 0%, #eab308 50%, transparent 70%);
+  top: 30%;
+  right: 20%;
+}
+
+.ambient-zone-logo::after {
+  background: radial-gradient(circle, #fbbf24 0%, #f97316 50%, transparent 70%);
+  bottom: 20%;
+  left: 25%;
+  animation-delay: -6s, -3s;
+}
+
+/* Features Section - Cool blue/teal ambient */
+.ambient-zone-features::before {
+  background: radial-gradient(circle, #06b6d4 0%, #0891b2 50%, transparent 70%);
+  top: 15%;
+  left: 20%;
+}
+
+.ambient-zone-features::after {
+  background: radial-gradient(circle, #14b8a6 0%, #0d9488 50%, transparent 70%);
+  bottom: 25%;
+  right: 30%;
+  animation-delay: -3s, -1s;
+}
+
+/* Preview Section - Purple/pink ambient */
+.ambient-zone-preview::before {
+  background: radial-gradient(circle, #a855f7 0%, #9333ea 50%, transparent 70%);
+  top: 40%;
+  right: 10%;
+}
+
+.ambient-zone-preview::after {
+  background: radial-gradient(circle, #ec4899 0%, #be185d 50%, transparent 70%);
+  bottom: 35%;
+  left: 15%;
+  animation-delay: -5s, -2.5s;
+}
+
+/* Rena Section - Soft pink/rose ambient */
+.ambient-zone-rena::before {
+  background: radial-gradient(circle, #f472b6 0%, #ec4899 50%, transparent 70%);
+  top: 25%;
+  left: 30%;
+}
+
+.ambient-zone-rena::after {
+  background: radial-gradient(circle, #fda4af 0%, #fb7185 50%, transparent 70%);
+  bottom: 40%;
+  right: 25%;
+  animation-delay: -4s, -1.5s;
+}
+
+/* Dodi Section - Green/emerald ambient */
+.ambient-zone-dodi::before {
+  background: radial-gradient(circle, #22c55e 0%, #16a34a 50%, transparent 70%);
+  top: 35%;
+  right: 20%;
+}
+
+.ambient-zone-dodi::after {
+  background: radial-gradient(circle, #34d399 0%, #10b981 50%, transparent 70%);
+  bottom: 30%;
+  left: 20%;
+  animation-delay: -2s, -4s;
+}
+
+/* Articles Section - Indigo/violet ambient */
+.ambient-zone-articles::before {
+  background: radial-gradient(circle, #6366f1 0%, #4f46e5 50%, transparent 70%);
+  top: 20%;
+  left: 15%;
+}
+
+.ambient-zone-articles::after {
+  background: radial-gradient(circle, #8b5cf6 0%, #7c3aed 50%, transparent 70%);
+  bottom: 25%;
+  right: 20%;
+  animation-delay: -6s, -3s;
+}
+
+/* CTA Section - Vibrant blue/cyan ambient */
+.ambient-zone-cta::before {
+  background: radial-gradient(circle, #0ea5e9 0%, #0284c7 50%, transparent 70%);
+  top: 30%;
+  right: 25%;
+}
+
+.ambient-zone-cta::after {
+  background: radial-gradient(circle, #06b6d4 0%, #0891b2 50%, transparent 70%);
+  bottom: 35%;
+  left: 30%;
+  animation-delay: -3s, -1s;
+}
+
+/* Floating animations */
+@keyframes float-light-1 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(30px, -20px) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 15px) scale(0.9);
+  }
+  75% {
+    transform: translate(25px, 10px) scale(1.05);
+  }
+}
+
+@keyframes float-light-2 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(-25px, 20px) scale(1.15);
+  }
+  66% {
+    transform: translate(20px, -15px) scale(0.85);
+  }
+}
+
+/* Color shifting animations for more dynamic effect */
+@keyframes color-shift-1 {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes color-shift-2 {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ambient-zone::before {
+    width: 200px;
+    height: 200px;
+  }
+
+  .ambient-zone::after {
+    width: 150px;
+    height: 150px;
+  }
+
+  .ambient-zone {
+    opacity: 0.4;
+    filter: blur(60px);
+  }
+}
+
+/* Reduce motion for users who prefer less animation */
+@media (prefers-reduced-motion: reduce) {
+  .ambient-zone::before,
+  .ambient-zone::after {
+    animation-duration: 20s, 25s;
+  }
+}
+
+/* Performance optimization - use will-change for better GPU acceleration */
+.ambient-zone::before,
+.ambient-zone::after {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* --- Animated Button --- */
+.animated-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 36px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: white; /* Disesuaikan */
+  box-shadow: 0 0 0 2px white; /* Disesuaikan */
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button svg {
+  position: absolute;
+  width: 24px;
+  fill: white; /* Disesuaikan */
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+  right: 16px;
+}
+
+.animated-button .arr-2 {
+  left: -25%;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: white; /* Disesuaikan */
+  border-radius: 20px;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #212121; /* Disesuaikan untuk kontras saat hover */
+  border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: #212121; /* Disesuaikan untuk kontras saat hover */
+}
+
+.animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px white; /* Disesuaikan */
+}
+
+.animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+
+.article-card > * {
+  @apply bg-blue-400/10 backdrop-blur-[15px] shadow-lg rounded-xl overflow-hidden;
+}
+
+/* Memastikan konten di dalam kartu tidak memiliki background sendiri */
+.article-card > * div[class*='card-content'] {
+  background: none !important;
+  background-color: transparent !important;
+}

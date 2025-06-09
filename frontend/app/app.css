@@ -1,0 +1,355 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&: is(.dark *));
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+}
+
+html,
+body {
+  background-color: var(--background-color-primary);
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--border)) transparent; /* thumb dan track color */
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --background-color-primary: #ffffff;
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+  --chart-green: 139 47% 40%; /* Contoh warna hijau */
+  --chart-red: 0 63% 43%; /* Contoh warna merah */
+  --chart-gray: 220 9% 46%; /* Contoh warna abu-abu */
+}
+
+.dark {
+  --background-color-primary: #12151e;
+  --background: #12151e;
+  --foreground: oklch(0.985 0 0);
+  --card: #191e2e;
+  --card-foreground: oklch(0.985 0 0);
+  --popover: #12151e;
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: #c2d2ff;
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: #2c3349;
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: #12151e;
+  --muted-foreground: #727c9e;
+  --accent: #191e2e;
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+  --chart-green: 133.64 88% 82%;
+  --chart-red: 3.63 70% 66%;
+  --chart-gray: 220 9% 56%;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.chat-bubble {
+  background-color: #12151e;
+  padding: 11px 23px;
+  -webkit-border-radius: 20px;
+  -webkit-border-bottom-left-radius: 2px;
+  -moz-border-radius: 20px;
+  -moz-border-radius-bottomleft: 2px;
+  border-radius: 20px;
+  border-bottom-left-radius: 2px;
+  display: inline-block;
+}
+.typing {
+  align-items: center;
+  display: flex;
+  height: 17px;
+}
+.typing .dot {
+  animation: mercuryTypingAnimation 1.8s infinite ease-in-out;
+  background-color: #727c9e;
+  border-radius: 50%;
+  height: 7px;
+  margin-right: 4px;
+  vertical-align: middle;
+  width: 7px;
+  display: inline-block;
+}
+.typing .dot:nth-child(1) {
+  animation-delay: 200ms;
+}
+.typing .dot:nth-child(2) {
+  animation-delay: 300ms;
+}
+.typing .dot:nth-child(3) {
+  animation-delay: 400ms;
+}
+.typing .dot:last-child {
+  margin-right: 0;
+}
+
+@keyframes mercuryTypingAnimation {
+  0% {
+    transform: translateY(0px);
+    background-color: #6cad96;
+  }
+  28% {
+    transform: translateY(-7px);
+    background-color: #9ecab9;
+  }
+  44% {
+    transform: translateY(0px);
+    background-color: #b5d9cb;
+  }
+}
+
+.markdown-content p {
+  margin-bottom: 0.75em; /* Sesuaikan dengan preferensi Anda */
+  line-height: 1.6;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  margin-left: 1.5em; /* Memberi indentasi pada daftar */
+  margin-bottom: 1em;
+  padding-left: 1.25em; /* Ruang untuk bullet/nomor */
+}
+
+.markdown-content ul {
+  list-style-type: disc; /* Bullet untuk daftar tidak bernomor */
+}
+
+.markdown-content ol {
+  list-style-type: decimal; /* Angka untuk daftar bernomor */
+}
+
+.markdown-content li {
+  margin-bottom: 0.4em; /* Jarak antar item daftar */
+}
+
+.markdown-content strong {
+  font-weight: bold;
+}
+
+.markdown-content em {
+  font-style: italic;
+}
+
+.markdown-content a {
+  color: #2563eb; /* Contoh warna link biru, sesuaikan dengan tema Anda */
+  text-decoration: underline;
+}
+
+.markdown-content a:hover {
+  color: #1d4ed8; /* Warna link saat di-hover */
+}
+
+/* Anda juga bisa menambahkan styling untuk heading jika diperlukan */
+.markdown-content h1 {
+  font-size: 1.875rem; /* text-2xl */
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+.markdown-content h2 {
+  font-size: 1.5rem; /* text-xl */
+  font-weight: bold;
+  margin-bottom: 0.4em;
+  margin-top: 0.8em;
+}
+
+.markdown-content h3 {
+  font-size: 1.25rem; /* text-lg */
+  font-weight: bold;
+  margin-bottom: 0.3em;
+  margin-top: 0.7em;
+}
+/* Dan seterusnya untuk h4, h5, h6 jika perlu */
+
+/* Menghindari margin bawah berlebih pada paragraf terakhir dalam sebuah item */
+.markdown-content li p:last-child {
+  margin-bottom: 0;
+}
+
+/* Untuk browser WebKit (Chrome, Safari, Edge baru) */
+::-webkit-scrollbar {
+  width: 8px; /* Lebar scrollbar */
+  height: 8px; /* Tinggi scrollbar (untuk horizontal) */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Membuat track transparan */
+  margin-block: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--border)); /* Warna thumb dari tema Shadcn/ui */
+  border-radius: 10px;
+  border: 2px solid transparent; /* Border transparan untuk efek overlay */
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--ring)); /* Warna thumb saat hover dari tema Shadcn/ui */
+}
+
+.plus-jakarta-sans-900 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.plus-jakarta-sans-800 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.plus-jakarta-sans-700 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.plus-jakarta-sans-600 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.plus-jakarta-sans-500 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.plus-jakarta-sans-400 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.plus-jakarta-sans-300 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.plus-jakarta-sans-200 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.plus-jakarta-sans-100 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
