@@ -1,6 +1,6 @@
 # ![Renaissance](/img_github/hero.png)
 
-# 🧠 Renaissance
+# ✨ Renaissance
 
 **AI-Powered Web App untuk Edukasi & Self-Support dalam Pencegahan Dampak Judi Online**
 
@@ -29,7 +29,9 @@ Renaissance menyediakan platform edukatif dan reflektif yang:
 
 ### 📘 1. Landing Page Informatif
 
-![Landing Page](/img_github/renaissancehomepage.png)
+<p align="center">
+  <img src="img_github/renaissancehomepage.png" alt="Landing Page" width="600">
+</p>
 
 Halaman utama yang menjelaskan misi Renaissance, isu yang ditangani, dan fitur-fitur unggulan.
 
@@ -37,7 +39,9 @@ Halaman utama yang menjelaskan misi Renaissance, isu yang ditangani, dan fitur-f
 
 ### 🔐 2. Autentikasi Pengguna
 
-![Auth Page](/img_github/login.png)
+<p align="center">
+  <img src="img_github/login.png" alt="Auth Page" width="600">
+</p>
 
 Pendaftaran & login dengan Firebase Authentication untuk pengalaman personal dan penyimpanan data aman.
 
@@ -45,7 +49,9 @@ Pendaftaran & login dengan Firebase Authentication untuk pengalaman personal dan
 
 ### 📚 3. Modul Edukasi Preventif
 
-![Modul Edukasi](/img_github/education.png)
+<p align="center">
+  <img src="img_github/education.png" alt="Modul Edukasi" width="600">
+</p>
 
 Modul berbasis komik yang mengajarkan:
 
@@ -59,7 +65,9 @@ Modul berbasis komik yang mengajarkan:
 
 ### ✍️ 4. Jurnal Refleksi + Analisis Sentimen AI
 
-![Jurnal AI](/img_github/CurhatPreview.png)
+<p align="center">
+  <img src="img_github/CurhatPreview.png" alt="Jurnal AI" width="600">
+</p>
 
 Pengguna dapat menulis catatan harian. Sistem akan:
 
@@ -71,9 +79,11 @@ Pengguna dapat menulis catatan harian. Sistem akan:
 
 ### 🤖 5. Chatbot AI Rena
 
-![Chatbot](/img_github/ChatbotPreview.png)
+<p align="center">
+  <img src="img_github/ChatbotPreview.png" alt="Chatbot" width="600">
+</p>
 
-Didukung **Azure Bot Service + LUIS**, chatbot ini:
+Didukung **Azure Bot Service + Gemini**, chatbot ini:
 
 - Menjawab pertanyaan seputar mental health & judi online
 - Memberi motivasi dan strategi coping
@@ -83,7 +93,9 @@ Didukung **Azure Bot Service + LUIS**, chatbot ini:
 
 ### 🧪 6. Cek Kondisi Mental (30 Pertanyaan)
 
-![Mental Test](/img_github/CekMentalPreview.png)
+<p align="center">
+  <img src="img_github/CekMentalPreview.png" alt="Mental Test" width="600">
+</p>
 
 Pengguna menjawab 30 pertanyaan untuk asesmen mental. AI akan:
 
@@ -95,7 +107,9 @@ Pengguna menjawab 30 pertanyaan untuk asesmen mental. AI akan:
 
 ### 📊 7. Dashboard Personal
 
-![Dashboard](/img_github/DashboardPreview.png)
+<p align="center">
+  <img src="img_github/DashboardPreview.png" alt="Dashboard" width="600">
+</p>
 
 Menampilkan:
 
@@ -108,7 +122,9 @@ Menampilkan:
 
 ### 📰 8. Artikel Edukatif
 
-![Artikel](/img_github/articles.png)
+<p align="center">
+  <img src="img_github/articles.png" alt="Artikel" width="600">
+</p>
 
 Kumpulan artikel seputar:
 
@@ -120,20 +136,14 @@ Kumpulan artikel seputar:
 
 ## ⚙️ Tech Stack
 
-| Layer       | Tools/Services                                     |
-| ----------- | -------------------------------------------------- |
-| Frontend    | React.js + React Router                            |
-| Backend     | Express.js di AWS EC2                              |
-| Auth        | Firebase Authentication                            |
-| Database    | Firebase Firestore                                 |
-| AI Services | Azure Cognitive Services (Text Analytics, LUIS/QA) |
-| Chatbot     | Azure Bot Service & Gemini                         |
-
----
-
-## 🔒 Keamanan
-
-Semua **API key** disimpan di `.env` dan **tidak di-commit** ke repository. Pastikan `.env` ada di `.gitignore`.
+| Layer           | Tools/Services                                                                                                                                                                                                                                                                |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Frontend**    | ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)                                         |
+| **Backend**     | ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)                                                                                                                                                     |
+| **Auth**        | ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase&logoColor=white)                                                                                                                                                            |
+| **Database**    | ![Firebase Firestore](https://img.shields.io/badge/Firestore-584CF6?style=for-the-badge&logo=google-cloud&logoColor=white)                                                                                                                                                    |
+| **AI Services** | ![Azure Cognitive Services](https://img.shields.io/badge/Azure_Cognitive_Services-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white) ![Azure OpenAI](https://img.shields.io/badge/Azure_OpenAI-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white) |
+| **Chatbot**     | ![Azure Bot Service](https://img.shields.io/badge/Azure_Bot_Service-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white) ![Gemini](https://img.shields.io/badge/Gemini-8E75B8?style=for-the-badge&logo=google-gemini&logoColor=white)                             |
 
 ---
 
