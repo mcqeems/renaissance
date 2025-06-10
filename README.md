@@ -105,7 +105,7 @@ Pengguna menjawab 30 pertanyaan untuk asesmen mental. AI akan:
 
 ---
 
-### 📊 7. Dashboard Personal
+### 📊 7. Smart Dashboard
 
 <p align="center">
   <img src="img_github/DashboardPreview.png" alt="Dashboard" width="600">
