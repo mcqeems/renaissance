@@ -152,7 +152,6 @@ Kumpulan artikel seputar:
 Renaissance mendukung SDG **(Sustainable Development Goals)** terutama:
 
 - SDG 3: Kesehatan dan Kesejahteraan
-- SDG 16: Perdamaian, Keadilan, dan Institusi yang Tangguh
 
 ---
 
