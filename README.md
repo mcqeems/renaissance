@@ -252,7 +252,7 @@ Untuk menyiapkan **backend** aplikasi Anda yang dibangun dengan **Express.js**, 
     PORT=
     ```
 
-4.  **Jalankan _backend_** sesuai instruksi di **README _backend_** (jika ada) atau gunakan `pm2` jika Anda ingin menjalankan aplikasi di _background_.
+4.  **Jalankan _backend_** sesuai instruksi di **README _backend_** atau gunakan `pm2` jika Anda ingin menjalankan aplikasi di _background_.
 
 ## ⚠️ Catatan
 
